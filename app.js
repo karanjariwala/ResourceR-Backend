@@ -17,7 +17,7 @@ app.all('*', (req, res, next) => {
     let origin = req.headers.origin;
     if (allowedOrigins.indexOf(origin) > -1) {
         console.log(origin);
-        res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
+        res.setHeader('Access-Control-Allow-Origin', origin);
     }
     res.set('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type');
     res.set('Access-Control-Allow-Credentials', 'true');
