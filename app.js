@@ -13,7 +13,7 @@ Availability = require('./availability.js');
 //app.use(cors({origin: 'http://127.0.0.1:8080'}));
 
 app.all('*', (req, res, next) => {
-    let allowedOrigins = ['http://localhost:8080', 'http://127.0.0.1:8080', 'http://api.hacknhelp.com'];
+    let allowedOrigins = ['http://localhost:8080', 'http://127.0.0.1:8080', 'http://dev.hacknhelp.com'];
     let origin = req.headers.origin;
     if (allowedOrigins.indexOf(origin) > -1) {
         console.log(origin);
